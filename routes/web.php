@@ -20,9 +20,9 @@ Route::get('/', function () {
     return view('home', ['comics' => $dbComics]);
 })->name('home');
 
-/* Route::get('/', function () {
+Route::get('/about', function () {
 
     return view('about');
 
-})->name('about'); */
+})->name('about');
 
