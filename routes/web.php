@@ -14,6 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
-    return view('comics');
-});
+
+    $dbComics = config('comics');
+
+    return view('home', ['comics' => $dbComics]);
+})->name('home');
+
+/* Route::get('/', function () {
+
+    return view('about');
+
+})->name('about'); */
+
